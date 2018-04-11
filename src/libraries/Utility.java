@@ -60,7 +60,7 @@ public class Utility {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//System.out.println("Reading from Excel is done.....");
+		System.out.println("Reading from Excel is done.....");
 		return arrayExcelData;
 	}
 	
