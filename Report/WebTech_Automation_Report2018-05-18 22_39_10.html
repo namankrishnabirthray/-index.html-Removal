@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Oracle|WebTech</title>
+
+	<style type='text/css'>
+			
+            
+                
+            
+        
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Removal-index.html </span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 18, 2018 10:39:10 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='93.878%'><span class='strong'>92</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='6.122%'>6</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www.oracle.com/index.html</span>
+						<span class='test-time'>May 18, 2018 10:39:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 18, 2018 10:39:34 PM</span>
+	<span class='label end-time'>May 18, 2018 11:13:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 34m 21s+124ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><span class='label white-text blue'>No of URL available in main URL=878,BreadCrumb URL=0,Header URL=768,Page URL=57,Footer URL=53</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><span class='label white-text blue'>Main URL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><table><tr><td>Status</td><td>Page Title</td><td>URL</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle | Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><span class='label white-text blue'>Page URL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:40:35 PM</td>
+					<td class='step-details'><table><tr><td>Status</td><td>Page Title</td><td>URL</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:40:57 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit?intcmp=ocom-hp-0518</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:41:29 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Buys DataScience.com</td><td>https://www.oracle.com/corporate/acquisitions/datascience/index.html?intcmp=ocm-hp-0518</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:42:02 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle OpenWorld 2018</td><td>https://www.oracle.com/openworld/index.html?source=WWMK180130P00003:ow:o:h:po:&intcmp=WWMK180130P00003:ow:o:h:po:</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:42:18 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Introducing Java 10 | Developers</td><td>https://developer.oracle.com/java/java10</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:42:44 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle</td><td>https://www.oracle.com/java/forrester-tei-java-cloud-service-form.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:43:06 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:43:23 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>IT Training and Certification for Oracle Technology  University</td><td>https://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=3</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:43:53 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Trials and Downloads </td><td>https://www.oracle.com/downloads/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:44:17 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Support | Support Resources | Customer Support </td><td>https://www.oracle.com/support/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:44:33 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Developers Portal</td><td>https://developer.oracle.com/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:44:58 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Careers | Job Search </td><td>https://www.oracle.com/corporate/careers/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:45:26 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Welcome | Oracle Community</td><td>https://community.oracle.com/welcome</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:45:40 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Help Center</td><td>https://docs.oracle.com/en/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:45:56 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Store</td><td>https://shop.oracle.com/apex/f?p=dstore:home:0</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:46:14 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#cloud</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:46:24 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#events</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:46:34 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#whatsnew</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:46:44 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#customersuccess</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:11 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Enables Smart Manufacturing with New Artificial Intelligence Cloud Applications</td><td>https://www.oracle.com/corporate/pressrelease/oracle-enables-smart-manufacturing-051418.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:32 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Cut your Amazon Bill in Half with  Oracle Autonomous Database Cloud</td><td>https://www.oracle.com/database/autonomous-database/guaranteed.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:52 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle JD Edwards: Your Platform for Digital Transformation</td><td>https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x555580abcd&source=OUNV180430P00001:OW:ES:LV</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:48:22 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Engineered Systems Maximum Availability Architecture Workshop</td><td>https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x547562abcd&source=ACMK180327P00033:OW:ES:LV</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:48:44 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Delivers Next Set of Autonomous Cloud Platform Services</td><td>https://www.oracle.com/corporate/pressrelease/oracle-cloud-platform-services-availability-050718.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:49:03 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Software as a Service (SaaS) | Support & Services </td><td>https://www.oracle.com/support/saas-services/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:49:22 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Database Technical Details</td><td>https://www.oracle.com/database/technology/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:49:40 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit?intcmp=ocom-hp-0518</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:50:01 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Buy Now  Cloud</td><td>https://cloud.oracle.com/en_US/cost-estimator?intcmp=ocom-hp-051818</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:50:14 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Developers Portal</td><td>https://developer.oracle.com/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:50:37 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>ERP Cloud </td><td>https://www.oracle.com/applications/erp/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:51:05 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>HCM - Human Capital Management </td><td>https://www.oracle.com/applications/human-capital-management/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:51:31 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Industries - Industry-Specific Solutions </td><td>https://www.oracle.com/industries/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:51:53 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Technology Network</td><td>http://www.oracle.com/technetwork/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:52:16 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Data-Driven Marketing Platform  Marketing Cloud</td><td>https://www.oracle.com/marketingcloud/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:52:46 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Sales Cloud - Sales Software </td><td>https://www.oracle.com/applications/customer-experience/sales/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:53:20 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Customer Experience Service - Modern Customer Service </td><td>https://www.oracle.com/applications/customer-experience/service/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:53:42 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Supply Chain Management - SCM </td><td>https://www.oracle.com/applications/supply-chain-management/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:54:17 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>GDPR: The High Cost (and Risk) for Noncompliance  SMB Blog</td><td>https://blogs.oracle.com/smb/gdpr-the-high-cost-and-risk-for-noncompliance</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:54:39 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Celebrating 5,000 Database Security Assessment Tool (DBSAT) downloads!  Security Inside Out Blog</td><td>https://blogs.oracle.com/securityinsideout/celebrating-5%2c000-database-security-assessment-tool-dbsat-downloads</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:55:00 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>JavaOne Event Expands with More Tracks, Languages, Communities--and New Name  Blogs</td><td>https://blogs.oracle.com/javaone-event-expands-with-more-tracks%2c-languages%2c-communities-and-new-name</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:55:14 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Events Search</td><td>https://www.oracle.com/search/events</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:55:33 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:55:55 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Global Oracle Contacts</td><td>https://www.oracle.com/corporate/contact/global.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:58:13 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle PartnerNetwork | Partner and Solutions Finder </td><td>https://solutions.oracle.com/scwar/scr/Partners/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:58:13 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle PartnerNetwork | Partner and Solutions Finder </td><td>https://solutions.oracle.com/scwar/scr/Partners/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:58:42 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Global Oracle Contacts</td><td>https://www.oracle.com/corporate/contact/global.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:59:05 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Support Contacts Global Directory</td><td>https://www.oracle.com/support/contact.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:59:24 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>About  Company Information </td><td>https://www.oracle.com/corporate/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:59:45 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Welcome | Oracle Community</td><td>https://community.oracle.com/welcome</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:59:59 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Careers | Job Search </td><td>https://www.oracle.com/corporate/careers/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:00:13 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Customer and Partner Search</td><td>https://www.oracle.com/search/customers</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:00:35 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Cloud Computing </td><td>https://www.oracle.com/cloud/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:00:55 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Cloud Applications ( SaaS )  Cloud</td><td>https://cloud.oracle.com/saas?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:01:13 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Platform as a Service  Cloud</td><td>https://cloud.oracle.com/paas?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:01:30 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>IaaS - Enterprise Cloud - Oracle Cloud Infrastructure</td><td>https://cloud.oracle.com/iaas?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:01:49 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Data Cloud | Customer Experience  Cloud</td><td>https://cloud.oracle.com/data-cloud?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:03 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:28 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle OpenWorld 2018</td><td>https://www.oracle.com/openworld/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:42 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Code 2018</td><td>https://developer.oracle.com/code</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:05 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Code One 2018</td><td>https://www.oracle.com/code-one/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:20 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Events Search</td><td>https://www.oracle.com/search/events</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:32 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Download Free Java Software</td><td>https://www.java.com/en/download/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:52 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Java SE - Downloads  Technology Network </td><td>http://www.oracle.com/technetwork/java/javase/downloads/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:09 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Try for Free  Cloud</td><td>https://cloud.oracle.com/en_US/tryit?intcmp=ocom-ft</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:31 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Newsroom - Press Releases and News </td><td>https://www.oracle.com/corporate/press/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:54 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Advertise</td><td>http://www.oracle.com/us/corporate/publishing/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:14 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Strategic Acquisitions </td><td>https://www.oracle.com/corporate/acquisitions/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:43 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Blogs</td><td>https://blogs.oracle.com/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:04 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>ERP Cloud </td><td>https://www.oracle.com/applications/erp/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:41 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Business Software, Business Management Software – NetSuite</td><td>http://www.netsuite.com/portal/home.shtml</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:12 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>HCM - Human Capital Management </td><td>https://www.oracle.com/applications/human-capital-management/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:34 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Data-Driven Marketing Platform  Marketing Cloud</td><td>https://www.oracle.com/marketingcloud/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:58 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>CX - Customer Experience Solutions </td><td>https://www.oracle.com/applications/customer-experience/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:24 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Supply Chain Management - SCM </td><td>https://www.oracle.com/applications/supply-chain-management/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:46 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Industries - Industry-Specific Solutions </td><td>https://www.oracle.com/industries/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:14 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Database | Cloud Database </td><td>https://www.oracle.com/database/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:34 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>MySQL | The Most Popular Open-Source Database </td><td>https://www.oracle.com/mysql/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:50 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Fusion Middleware </td><td>https://www.oracle.com/middleware/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:08 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Java Software </td><td>https://www.oracle.com/java/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:23 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Engineered Systems </td><td>https://www.oracle.com/engineered-systems/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:47 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle RSS Feeds</td><td>http://www.oracle.com/us/syndication/feeds/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:11:04 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:11:26 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Copyright </td><td>https://www.oracle.com/legal/copyright.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:11:40 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Site Map</td><td>https://www.oracle.com/sitemap.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:11:54 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Privacy at  Oracle</td><td>https://www.oracle.com/legal/privacy/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:16 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Privacy Policy </td><td>https://www.oracle.com/legal/privacy/privacy-policy.html#advertising</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:31 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:41 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td> Integrated Cloud Applications and Platform Services</td><td>https://www.oracle.com/index.html#</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:01 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Contacts</td><td>https://www.oracle.com/corporate/contact/index.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:19 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Global Oracle Contacts</td><td>https://www.oracle.com/corporate/contact/global.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:35 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Support Contacts Global Directory</td><td>https://www.oracle.com/support/contact.html</td></tr></table></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:55 PM</td>
+					<td class='step-details'><table><tr><td>-></td><td>Oracle Partner Support  PartnerNetwork</td><td>http://partner-support.oracle.com/</td></tr></table></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:13:55 PM</td>
+					<td class='step-details'><span class='label white-text red'>No of Null URL=4</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>98</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 18, 2018 10:39:10 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 18, 2018 11:13:57 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 34m 46s+568ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Environment</td>
+								<td>Oracle|Web Technology</td>
+							</tr>
+							<tr>
+								<td>Host</td>
+								<td>Aarti Ekbote</td>
+							</tr>
+							<tr>
+								<td>FW-Design</td>
+								<td>Abdul Beigh </td>
+							</tr>
+							<tr>
+								<td>Author</td>
+								<td>Naman Krishna Birthray</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 92,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 6,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+ 		</script>
+	</body>
+	
+</html>
