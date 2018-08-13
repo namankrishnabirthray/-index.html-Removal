@@ -1,0 +1,2517 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Oracle|WebTech</title>
+
+	<style type='text/css'>
+			
+            
+                
+            
+        
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Removal-index.html </span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Aug 13, 2018 11:02:22 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='10%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='90%'>9</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='76.486%'><span class='strong'>296</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='13.178%'>51</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='10.336%'>40</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/</span>
+						<span class='test-time'>Aug 13, 2018 11:02:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:02:51 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:03:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+390ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:02:51 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=611,BreadCrumb URL=3,Header URL=556,Page URL=25,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:02:51 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/'>https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:02:52 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:02:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/features/index.html'>https://www-sites.oracle.com/fr/corporate/features/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/#cw21-helptab'>https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/#cw21-helptab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/#cw21-socialtab'>https://www-sites.oracle.com/fr/features/oracle-open-world-2017-keynote/ellison-1/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:03:04 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/support/contact/index.html'>https://www-sites.oracle.com/us/support/contact/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:03:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/syndication/feeds/index.html'>https://www-sites.oracle.com/us/syndication/feeds/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:03:10 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=5</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/</span>
+						<span class='test-time'>Aug 13, 2018 11:03:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:03:36 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:04:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 7s+941ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:03:37 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=690,BreadCrumb URL=2,Header URL=556,Page URL=105,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:03:37 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:03:37 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide0'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide2'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide3'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide3</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide4'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide4</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/insight-to-campaign-roi.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/insight-to-campaign-roi.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/list-import-to-prospect.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/list-import-to-prospect.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:51 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/analytics-to-insight.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/analytics-to-insight.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:03:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#moretabs'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#moretabs</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/insight-to-campaign-roi.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/insight-to-campaign-roi.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:02 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/list-import-to-prospect.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/list-import-to-prospect.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:02 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/analytics-to-insight.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/analytics-to-insight.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:02 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/campaign-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:03 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/event-execution.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:03 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/disparate-sources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:03 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:04 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:04 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide0'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#opentopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#opentopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#show_alltopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#show_alltopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#epr-cloud'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#epr-cloud</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#financials'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#financials</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:08 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#procurement'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#procurement</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:08 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#opentypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#opentypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:08 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#show_alltypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#show_alltypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#stories'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#stories</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#ebook'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#ebook</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#report'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#report</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#video'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#video</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#whitepaper'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#whitepaper</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:11 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/marketingcloud/customers/success-stories/reiss.html'>https://www-sites.oracle.com/marketingcloud/customers/success-stories/reiss.html</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#financials'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#financials</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#procurement'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#procurement</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud'>https://www-sites.oracle.com/fr/applications/modern-best-practices/marketing/topics-and-trends.html#epr-cloud</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/customer-experience/marketing/'>https://www-sites.oracle.com/applications/customer-experience/marketing/</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:04:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/corporate/contact/global-070511.html'>https://www-sites.oracle.com/us/corporate/contact/global-070511.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/marketing/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:04:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:04:44 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/</span>
+						<span class='test-time'>Aug 13, 2018 11:05:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:05:13 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:05:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+765ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:05:13 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=677,BreadCrumb URL=3,Header URL=556,Page URL=91,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:05:13 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:05:13 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:17 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:18 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/uk/applications/enterprise-resource-planning/roles/chief-financial-officer/features/finance-digital-transformation/'>https://www-sites.oracle.com/uk/applications/enterprise-resource-planning/roles/chief-financial-officer/features/finance-digital-transformation/</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide0'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide2'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide3'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide3</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide4'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide4</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/asset-acquisition.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/asset-acquisition.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/bank-transaction.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/bank-transaction.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/expense-report.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/expense-report.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:33 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/supplier-invoice.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/supplier-invoice.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:33 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/asset-acquisition.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/asset-acquisition.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/bank-transaction.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/bank-transaction.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/expense-report.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/expense-report.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/supplier-invoice.html'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/supplier-invoice.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/finance/period-close.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/finance/period-close.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#share'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#share</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#share'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#share</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide0'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#opentopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#opentopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#show_alltopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#show_alltopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#opentypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#opentypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#show_alltypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#show_alltypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#report'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#report</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#video'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#video</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/?bcid=2440949554001&playerType=single-social&size=c23'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/?bcid=2440949554001&playerType=single-social&size=c23</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/?bcid=4232415074001&playerType=single-social&size=c23'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/?bcid=4232415074001&playerType=single-social&size=c23</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/enterprise-resource-planning/solutions/'>https://www-sites.oracle.com/applications/enterprise-resource-planning/solutions/</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:51 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/finance/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:05:54 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/</span>
+						<span class='test-time'>Aug 13, 2018 11:06:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:06:18 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:07:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+271ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:06:18 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=664,BreadCrumb URL=3,Header URL=556,Page URL=78,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:06:18 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:18 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:06:18 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#back'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide0'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide2'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#next'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/supplier-registration.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/supplier-registration.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/smart-sourcing.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/smart-sourcing.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:33 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/contract-creation.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/contract-creation.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/requisition-to-receipt.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/requisition-to-receipt.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/supplier-return.html'>https://www-sites.oracle.com/applications/modern-best-practice/banking/procurement/supplier-return.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#opentopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#opentopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#show_alltopics'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#show_alltopics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#opentypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#opentypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#show_alltypes'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#show_alltypes</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#demo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#demo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#ebook'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#ebook</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#infographic'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#infographic</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#video'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#video</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=3576339159001&playerType=single-social&size=c23'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=3576339159001&playerType=single-social&size=c23</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=4655985663001&playerType=single-social&size=c23'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=4655985663001&playerType=single-social&size=c23</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=4655985663001&playerType=single-social&size=c23'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/?bcid=4655985663001&playerType=single-social&size=c23</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/topics-and-trends.html#cfo</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:06:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/corporate/contact'>https://www-sites.oracle.com/us/corporate/contact</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/modern-best-practice/banking/procurement/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:07:06 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/</span>
+						<span class='test-time'>Aug 13, 2018 11:07:31 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:07:31 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:08:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 22s+903ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:07:32 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=657,BreadCrumb URL=3,Header URL=556,Page URL=71,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:07:32 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:32 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:07:32 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/core/'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/core/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:36 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:36 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/core/'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/core/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:36 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/capabilities.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/capabilities.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/resources.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/resources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:07:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cw20-tbe-dashboard-3407288.jpg#slide0'>https://www-sites.oracle.com/assets/cw20-tbe-dashboard-3407288.jpg#slide0</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:07:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cw20-tbe-sourcing-3407285.jpg#slide1'>https://www-sites.oracle.com/assets/cw20-tbe-sourcing-3407285.jpg#slide1</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:08:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cw20-welcome-team-login-3407691.jpg#slide2'>https://www-sites.oracle.com/assets/cw20-welcome-team-login-3407691.jpg#slide2</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:08:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cw20-talent-center-3407289.jpg#slide3'>https://www-sites.oracle.com/assets/cw20-talent-center-3407289.jpg#slide3</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:08:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cw20v1-hr-talent-manage-04-2291018.jpg#slide4'>https://www-sites.oracle.com/assets/cw20v1-hr-talent-manage-04-2291018.jpg#slide4</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:19 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/modern-best-practice/hr-and-talent-management/'>https://www-sites.oracle.com/applications/modern-best-practice/hr-and-talent-management/</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#slide0'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#slide1'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:30 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize-companies.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize-companies.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:08:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/cloud/index.html'>https://www-sites.oracle.com/fr/cloud/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/hcm-midsize/talent/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:08:54 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/</span>
+						<span class='test-time'>Aug 13, 2018 11:09:29 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:09:29 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:09:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+419ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:09:29 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=643,BreadCrumb URL=2,Header URL=556,Page URL=58,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:09:29 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:09:29 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:32 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/'>https://www-sites.oracle.com/fr/applications/performance-management/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:33 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/'>https://www-sites.oracle.com/fr/applications/performance-management/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/roles/chief-financial-officer.html'>https://www-sites.oracle.com/fr/applications/performance-management/roles/chief-financial-officer.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/products.html'>https://www-sites.oracle.com/fr/applications/performance-management/products.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/get-started.html'>https://www-sites.oracle.com/fr/applications/performance-management/get-started.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/enterprise-performance-mangement-cloud.html'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/enterprise-performance-mangement-cloud.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/enterprise-performance-management-cloud.html'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/enterprise-performance-management-cloud.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/performance-management/solutions/business-planning.html'>https://www-sites.oracle.com/applications/performance-management/solutions/business-planning.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/performance-management/solutions/financial-close-reporting.html'>https://www-sites.oracle.com/applications/performance-management/solutions/financial-close-reporting.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/performance-management/solutions/profitability-cost-management.html'>https://www-sites.oracle.com/applications/performance-management/solutions/profitability-cost-management.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/products/tax-reporting-cloud-service.html'>https://www-sites.oracle.com/fr/applications/performance-management/products/tax-reporting-cloud-service.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/planning-budgeting-cloud-midsize-companies.html'>https://www-sites.oracle.com/fr/applications/performance-management/planning-budgeting-cloud-midsize-companies.html</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:09:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/cloud/index.html'>https://www-sites.oracle.com/fr/cloud/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-calltab'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-calltab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-trytab'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-trytab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/performance-management/solutions/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:09:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:09:59 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/</span>
+						<span class='test-time'>Aug 13, 2018 11:10:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:10:23 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:13:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 43s+920ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:10:23 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=669,BreadCrumb URL=4,Header URL=556,Page URL=82,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:10:23 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:10:23 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:10:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/supply-chain-management/solutions/index.html'>https://www-sites.oracle.com/applications/supply-chain-management/solutions/index.html</a>-brokenLink</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/supply-chain-management/solutions/product-lifecycle-management/plm-industry-solutions.html'>https://www-sites.oracle.com/fr/applications/supply-chain-management/solutions/product-lifecycle-management/plm-industry-solutions.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/supply-chain-management/solutions/product-lifecycle-management/plm-industry-solutions.html'>https://www-sites.oracle.com/fr/applications/supply-chain-management/solutions/product-lifecycle-management/plm-industry-solutions.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#back'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#next'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#back'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide0'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide1'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide2'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:10:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#next'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:10:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/agile-ht-exec-brief-1740252.pdf'>https://www-sites.oracle.com/assets/agile-ht-exec-brief-1740252.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/agile-for-semiconductor-1868201.pdf'>https://www-sites.oracle.com/assets/agile-for-semiconductor-1868201.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/cimdata-oracle-innovation-mgmt-2280212.pdf'>https://www-sites.oracle.com/assets/cimdata-oracle-innovation-mgmt-2280212.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:19 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/product-cloud-infographic-2339776.pdf'>https://www-sites.oracle.com/assets/product-cloud-infographic-2339776.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/enterp-prod-lifecycle-manag-rept-1621419.pdf'>https://www-sites.oracle.com/assets/enterp-prod-lifecycle-manag-rept-1621419.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:30 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/foundation-enterprise-quality-2355174.pdf'>https://www-sites.oracle.com/assets/foundation-enterprise-quality-2355174.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/bps-for-hosting-agile-plm-2360597.pdf'>https://www-sites.oracle.com/assets/bps-for-hosting-agile-plm-2360597.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/sb-oracle-product-value-chain-cloud-2348024.pdf'>https://www-sites.oracle.com/assets/sb-oracle-product-value-chain-cloud-2348024.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/how-to-manage-innovation-2295966.pdf'>https://www-sites.oracle.com/assets/how-to-manage-innovation-2295966.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/engineering-collaboration/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/engineering-collaboration/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:11:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-collaboration/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-collaboration/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:03 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-cost-management/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-cost-management/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-governance-compliance/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-governance-compliance/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-portfolio-management/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-portfolio-management/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:18 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-quality-management/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-quality-management/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/autovue/autovue-for-agile-solutions-1859940.html'>https://www-sites.oracle.com/us/products/applications/autovue/autovue-for-agile-solutions-1859940.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/industries/high-tech/overview/index.html'>https://www-sites.oracle.com/us/industries/high-tech/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/innovation-management/index.html'>https://www-sites.oracle.com/fr/innovation-management/index.html</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/plm-mobile-for-agile/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/plm-mobile-for-agile/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/supply-chain-management/product-development-cloud.html'>https://www-sites.oracle.com/applications/supply-chain-management/product-development-cloud.html</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:12:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-lifecycle-analytics/overview/index.html'>https://www-sites.oracle.com/us/products/applications/agile/product-lifecycle-management/product-lifecycle-analytics/overview/index.html</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/supply-chain-management/solutions/product-lifecycle-management/innovation-management.html'>https://www-sites.oracle.com/applications/supply-chain-management/solutions/product-lifecycle-management/innovation-management.html</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/supply-chain-management/product-hub-cloud.html'>https://www-sites.oracle.com/applications/supply-chain-management/product-hub-cloud.html</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:12:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/supply-chain-management/project-portfolio-management-cloud.html'>https://www-sites.oracle.com/applications/supply-chain-management/project-portfolio-management-cloud.html</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/scm'>https://www-sites.oracle.com/scm</a>-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:02 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/supply-chain-management/what-is-supply-chain-management-system.html'>https://www-sites.oracle.com/fr/applications/supply-chain-management/what-is-supply-chain-management-system.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:04 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-calltab'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-calltab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/agile/industries/high-technology-semiconductor/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:13:07 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</span>
+						<span class='test-time'>Aug 13, 2018 11:13:40 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:13:40 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:14:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+881ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:13:40 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=658,BreadCrumb URL=2,Header URL=556,Page URL=73,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:13:40 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:13:40 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:13:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/global-hr-2293610.pdf'>https://www-sites.oracle.com/assets/global-hr-2293610.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/optimization/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/optimization/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/analytics/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/analytics/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:13:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/capabilities.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/capabilities.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/resources.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/resources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:01 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:14:07 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/hcm-dashboard-1-2288464.png#slide0'>https://www-sites.oracle.com/us/assets/hcm-dashboard-1-2288464.png#slide0</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:14:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/hr-2-2288465.png#slide1'>https://www-sites.oracle.com/us/assets/hr-2-2288465.png#slide1</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:14:19 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/hr-3-2288466.png#slide2'>https://www-sites.oracle.com/us/assets/hr-3-2288466.png#slide2</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:14:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/hr-4-2288467.png#slide3'>https://www-sites.oracle.com/us/assets/hr-4-2288467.png#slide3</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide0'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide1'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide2'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:30 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:14:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/hrms/index.html'>https://www-sites.oracle.com/fr/hrms/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/customer2cloud'>https://www-sites.oracle.com/customer2cloud</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/enterprise-resource-planning/solutions/hcm-erp.html'>https://www-sites.oracle.com/applications/enterprise-resource-planning/solutions/hcm-erp.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:14:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:14:50 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</span>
+						<span class='test-time'>Aug 13, 2018 11:15:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:15:22 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:16:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 7s+780ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:15:22 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=658,BreadCrumb URL=2,Header URL=556,Page URL=73,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:15:22 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:15:22 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:15:32 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/workforce-rewards-2288384.pdf'>https://www-sites.oracle.com/assets/workforce-rewards-2288384.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/payroll/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/payroll/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/sales-compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/sales-compensation/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/capabilities.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/capabilities.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/resources.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/resources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:15:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:15:51 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-02-2286617.jpg#slide0'>https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-02-2286617.jpg#slide0</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:15:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-03-2286618.jpg#slide1'>https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-03-2286618.jpg#slide1</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:16:04 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-03-2418325.jpg#slide2'>https://www-sites.oracle.com/us/assets/cw20v1-wr-comp-ov-03-2418325.jpg#slide2</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:16:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us//assets/cw20v1-wr-comp-ov-04-2286619.jpg#slide3'>https://www-sites.oracle.com/us//assets/cw20v1-wr-comp-ov-04-2286619.jpg#slide3</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#slide0'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#slide1'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:16:17 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/hrms/index.html'>https://www-sites.oracle.com/fr/hrms/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:22 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/customer2cloud/'>https://www-sites.oracle.com/applications/customer2cloud/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/erp/solutions/hcm-erp.html'>https://www-sites.oracle.com/fr/applications/erp/solutions/hcm-erp.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:16:29 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/</span>
+						<span class='test-time'>Aug 13, 2018 11:16:57 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 13, 2018 11:16:57 PM</span>
+	<span class='label end-time'>Aug 13, 2018 11:17:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 2s+556ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:16:57 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=656,BreadCrumb URL=2,Header URL=556,Page URL=71,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:16:57 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:16:57 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:16:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/assets/workforce-rewards-2288384.pdf'>https://www-sites.oracle.com/assets/workforce-rewards-2288384.pdf</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:11 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/compensation/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:11 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/payroll/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/payroll/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:12 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/sales-compensation/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/sales-compensation/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:12 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/capabilities.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/capabilities.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-01-2286717.jpg#slide0'>https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-01-2286717.jpg#slide0</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-02-2286719.jpg#slide1'>https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-02-2286719.jpg#slide1</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-03-2286722.jpg#slide2'>https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-03-2286722.jpg#slide2</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-04-2286724.jpg#slide3'>https://www-sites.oracle.com/us/assets/cw20v1-wr-bene-04-2286724.jpg#slide3</a>-brokenLink-Replayced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide0'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide1'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide2'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#next</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:17:51 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/hrms/index.html'>https://www-sites.oracle.com/fr/hrms/index.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/'>https://www-sites.oracle.com/fr/applications/human-capital-management/global-hr/human-resources/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:52 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/applications/customer2cloud/'>https://www-sites.oracle.com/applications/customer2cloud/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html'>https://www-sites.oracle.com/fr/applications/human-capital-management/roles/hr-operations-role.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/erp/solutions/hcm-erp.html'>https://www-sites.oracle.com/fr/applications/erp/solutions/hcm-erp.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:57 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-tab1'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-tab1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-demotab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-demotab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-socialtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-signtab'>https://www-sites.oracle.com/fr/applications/human-capital-management/workforce-rewards/benefits/#cw21-signtab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:17:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/fr/corporate/contact/global.html'>https://www-sites.oracle.com/fr/corporate/contact/global.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:17:59 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>10</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>387</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Aug 13, 2018 11:02:22 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Aug 13, 2018 11:18:00 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 15m 37s+833ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Author</td>
+								<td>Naman Krishna Birthray</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 9,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 9,
+				
+				passChild: 296,
+				failChild: 51,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 40,
+				exceptionsChild: 51,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+ 		</script>
+	</body>
+	
+</html>
