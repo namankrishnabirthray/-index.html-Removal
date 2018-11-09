@@ -1,0 +1,1017 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Oracle|WebTech</title>
+
+	<style type='text/css'>
+			
+            
+                
+            
+        
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Removal-index.html </span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Nov 9, 2018 03:01:02 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='81.897%'><span class='strong'>95</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0.862%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='17.241%'>20</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/industries/communications/</span>
+						<span class='test-time'>Nov 9, 2018 03:01:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 9, 2018 03:01:51 PM</span>
+	<span class='label end-time'>Nov 9, 2018 03:04:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 57s+477ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:21 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=740,BreadCrumb URL=0,Header URL=599,Page URL=109,Footer URL=32</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:21 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/'>https://www-sites.oracle.com/industries/communications/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:23 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:36 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open'>https://www-sites.oracle.com/industries/communications/#open</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#back'>https://www-sites.oracle.com/industries/communications/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#u02contactmenu'>https://www-sites.oracle.com/industries/communications/#u02contactmenu</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/support/contact.html'>https://www-sites.oracle.com/support/contact.html</a>-Replaced</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/'>https://www-sites.oracle.com/industries/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:51 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/'>https://www-sites.oracle.com/industries/communications/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:02:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products.html'>https://www-sites.oracle.com/industries/communications/products.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html'>https://www-sites.oracle.com/industries/communications/products-category.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html'>https://www-sites.oracle.com/industries/communications/solutions.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/cloud.html'>https://www-sites.oracle.com/industries/communications/cloud.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/resources.html'>https://www-sites.oracle.com/industries/communications/resources.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:18 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open-customer-experience'>https://www-sites.oracle.com/industries/communications/#open-customer-experience</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/live-experience-cloud/'>https://www-sites.oracle.com/industries/communications/products/live-experience-cloud/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html#category-customer'>https://www-sites.oracle.com/industries/communications/products-category.html#category-customer</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open-enterprise-communications'>https://www-sites.oracle.com/industries/communications/#open-enterprise-communications</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/enterprise-communications-broker/'>https://www-sites.oracle.com/industries/communications/products/enterprise-communications-broker/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:32 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/enterprise-operations-monitor/'>https://www-sites.oracle.com/industries/communications/products/enterprise-operations-monitor/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/enterprise-session-border-controller/'>https://www-sites.oracle.com/industries/communications/products/enterprise-session-border-controller/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/interactive-session-recorder/'>https://www-sites.oracle.com/industries/communications/products/interactive-session-recorder/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:40 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html#category-communications'>https://www-sites.oracle.com/industries/communications/products-category.html#category-communications</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open-monetization-and-orchestration'>https://www-sites.oracle.com/industries/communications/#open-monetization-and-orchestration</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/billing-revenue-management/'>https://www-sites.oracle.com/industries/communications/products/billing-revenue-management/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/network-charging-control/'>https://www-sites.oracle.com/industries/communications/products/network-charging-control/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/order-service-management/'>https://www-sites.oracle.com/industries/communications/products/order-service-management/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:53 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html#category-monetization'>https://www-sites.oracle.com/industries/communications/products-category.html#category-monetization</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open-network-and-border-control'>https://www-sites.oracle.com/industries/communications/#open-network-and-border-control</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:03:58 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/session-border-controller/'>https://www-sites.oracle.com/industries/communications/products/session-border-controller/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/operations-monitor/'>https://www-sites.oracle.com/industries/communications/products/operations-monitor/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:02 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/session-delivery-manager/'>https://www-sites.oracle.com/industries/communications/products/session-delivery-manager/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html#category-network'>https://www-sites.oracle.com/industries/communications/products-category.html#category-network</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/#open-signaling-and-policy'>https://www-sites.oracle.com/industries/communications/#open-signaling-and-policy</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:11 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/policy-management/'>https://www-sites.oracle.com/industries/communications/products/policy-management/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:12 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/diameter-signaling-router/'>https://www-sites.oracle.com/industries/communications/products/diameter-signaling-router/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:15 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/eagle/'>https://www-sites.oracle.com/industries/communications/products/eagle/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:17 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products/performance-intelligence-center/'>https://www-sites.oracle.com/industries/communications/products/performance-intelligence-center/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:21 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/products-category.html#category-signaling'>https://www-sites.oracle.com/industries/communications/products-category.html#category-signaling</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5671538417001'>https://www-sites.oracle.com/industries/communications/?bcid=5671538417001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5812815946001'>https://www-sites.oracle.com/industries/communications/?bcid=5812815946001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:31 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5813280998001'>https://www-sites.oracle.com/industries/communications/?bcid=5813280998001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:34 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5812815949001'>https://www-sites.oracle.com/industries/communications/?bcid=5812815949001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5815874770001'>https://www-sites.oracle.com/industries/communications/?bcid=5815874770001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:41 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5813292788001'>https://www-sites.oracle.com/industries/communications/?bcid=5813292788001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5128941622001'>https://www-sites.oracle.com/industries/communications/?bcid=5128941622001</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:04:48 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/?bcid=5813288539001'>https://www-sites.oracle.com/industries/communications/?bcid=5813288539001</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:04:48 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=3</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/industries/communications/solutions.html</span>
+						<span class='test-time'>Nov 9, 2018 03:05:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 9, 2018 03:05:15 PM</span>
+	<span class='label end-time'>Nov 9, 2018 03:07:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 12s+91ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:05:46 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=705,BreadCrumb URL=0,Header URL=599,Page URL=74,Footer URL=32</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:05:46 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:05:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html'>https://www-sites.oracle.com/industries/communications/solutions.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:05:46 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:05:56 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel1'>https://www-sites.oracle.com/industries/communications/solutions.html#panel1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:00 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel3'>https://www-sites.oracle.com/industries/communications/solutions.html#panel3</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:05 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel3b'>https://www-sites.oracle.com/industries/communications/solutions.html#panel3b</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:09 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel3c'>https://www-sites.oracle.com/industries/communications/solutions.html#panel3c</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel3d'>https://www-sites.oracle.com/industries/communications/solutions.html#panel3d</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:16 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#panel2'>https://www-sites.oracle.com/industries/communications/solutions.html#panel2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:19 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/5g-next-generation-core/'>https://www-sites.oracle.com/industries/communications/solutions/5g-next-generation-core/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:23 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html?bcid=5745420829001&playerType=single-social&size=events'>https://www-sites.oracle.com/industries/communications/solutions.html?bcid=5745420829001&playerType=single-social&size=events</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html?bcid=5715327885001&playerType=single-social&size=events'>https://www-sites.oracle.com/industries/communications/solutions.html?bcid=5715327885001&playerType=single-social&size=events</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:29 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/digital-commerce-monetization/'>https://www-sites.oracle.com/industries/communications/solutions/digital-commerce-monetization/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:33 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html?bcid=2681803617001&playerType=single-social&size=events'>https://www-sites.oracle.com/industries/communications/solutions.html?bcid=2681803617001&playerType=single-social&size=events</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/digital-business-iot/'>https://www-sites.oracle.com/industries/communications/solutions/digital-business-iot/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/signaling-firewalls/'>https://www-sites.oracle.com/industries/communications/solutions/signaling-firewalls/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:42 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#data'>https://www-sites.oracle.com/industries/communications/solutions.html#data</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:44 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/digital-business-experience/'>https://www-sites.oracle.com/industries/communications/solutions/digital-business-experience/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:46 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/service-network-orchestration/'>https://www-sites.oracle.com/industries/communications/solutions/service-network-orchestration/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#customer-experience'>https://www-sites.oracle.com/industries/communications/solutions.html#customer-experience</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:54 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#internet-of-things-apps'>https://www-sites.oracle.com/industries/communications/solutions.html#internet-of-things-apps</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:06:59 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#supply-chain-management'>https://www-sites.oracle.com/industries/communications/solutions.html#supply-chain-management</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:03 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#saas-analytics'>https://www-sites.oracle.com/industries/communications/solutions.html#saas-analytics</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:06 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/network-function-virtualization/'>https://www-sites.oracle.com/industries/communications/solutions/network-function-virtualization/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:08 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions/virtualized-volte/'>https://www-sites.oracle.com/industries/communications/solutions/virtualized-volte/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:12 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#data-management'>https://www-sites.oracle.com/industries/communications/solutions.html#data-management</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:16 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#security'>https://www-sites.oracle.com/industries/communications/solutions.html#security</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:07:20 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html#business-analytics'>https://www-sites.oracle.com/industries/communications/solutions.html#business-analytics</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:07:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/us/products/applications/communications/consulting/overview/'>https://www-sites.oracle.com/us/products/applications/communications/consulting/overview/</a>-brokenLink-Replaced</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:07:27 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/industries/communications/solutions.html</span>
+						<span class='test-time'>Nov 9, 2018 03:08:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 9, 2018 03:08:04 PM</span>
+	<span class='label end-time'>Nov 9, 2018 03:08:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+339ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:08:34 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=705,BreadCrumb URL=0,Header URL=599,Page URL=74,Footer URL=32</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:08:34 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:08:35 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/solutions.html'>https://www-sites.oracle.com/industries/communications/solutions.html</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:08:35 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:08:47 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=0</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/ae/industries/communications/</span>
+						<span class='test-time'>Nov 9, 2018 03:09:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 9, 2018 03:09:09 PM</span>
+	<span class='label end-time'>Nov 9, 2018 03:09:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+663ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:10 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=739,BreadCrumb URL=2,Header URL=610,Page URL=100,Footer URL=27</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:10 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:10 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/'>https://www-sites.oracle.com/ae/industries/communications/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:10 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:13 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#open'>https://www-sites.oracle.com/ae/industries/communications/#open</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#back'>https://www-sites.oracle.com/ae/industries/communications/#back</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:14 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#u02contactmenu'>https://www-sites.oracle.com/ae/industries/communications/#u02contactmenu</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:17 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/'>https://www-sites.oracle.com/ae/industries/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:20 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/service-providers/products/service-network-orchestration/'>https://www-sites.oracle.com/industries/communications/service-providers/products/service-network-orchestration/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:24 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/service-providers/products/session-border-controller.html'>https://www-sites.oracle.com/industries/communications/service-providers/products/session-border-controller.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:25 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#next'>https://www-sites.oracle.com/ae/industries/communications/#next</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#slide0'>https://www-sites.oracle.com/ae/industries/communications/#slide0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:26 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#slide1'>https://www-sites.oracle.com/ae/industries/communications/#slide1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:27 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#slide2'>https://www-sites.oracle.com/ae/industries/communications/#slide2</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#slide3'>https://www-sites.oracle.com/ae/industries/communications/#slide3</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:32 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/enterprise/'>https://www-sites.oracle.com/ae/industries/communications/enterprise/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:37 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/service-providers/'>https://www-sites.oracle.com/ae/industries/communications/service-providers/</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:38 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#'>https://www-sites.oracle.com/ae/industries/communications/#</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#panel0'>https://www-sites.oracle.com/ae/industries/communications/#panel0</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:39 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#panel1'>https://www-sites.oracle.com/ae/industries/communications/#panel1</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:43 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/digital-convergence.html'>https://www-sites.oracle.com/industries/communications/digital-convergence.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:45 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/disruptive-services.html'>https://www-sites.oracle.com/industries/communications/disruptive-services.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:47 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/industries/communications/beyond-connectivity.html'>https://www-sites.oracle.com/industries/communications/beyond-connectivity.html</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:49 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#cw21-helptab'>https://www-sites.oracle.com/ae/industries/communications/#cw21-helptab</a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:09:50 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/industries/communications/#cw21-socialtab'>https://www-sites.oracle.com/ae/industries/communications/#cw21-socialtab</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:50 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/ae/secure-global-desktop/</span>
+						<span class='test-time'>Nov 9, 2018 03:10:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 9, 2018 03:10:27 PM</span>
+	<span class='label end-time'>Nov 9, 2018 03:10:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+188ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:10:27 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of URL available in main URL=701,BreadCrumb URL=3,Header URL=610,Page URL=57,Footer URL=31</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:10:27 PM</td>
+					<td class='step-details'><span class='label white-text grey'>parentURL navigation result listed below</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:10:28 PM</td>
+					<td class='step-details'><a href='https://www-sites.oracle.com/ae/secure-global-desktop/'>https://www-sites.oracle.com/ae/secure-global-desktop/</a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:10:28 PM</td>
+					<td class='step-details'><span class='label white-text grey'> childURLs 'index.html' results listed below</span></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:10:30 PM</td>
+					<td class='step-details'><span class='label white-text grey'>No of Null URL=1</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>5</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>116</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 9, 2018 03:01:02 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 9, 2018 03:10:53 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 9m 50s+708ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Author</td>
+								<td>Naman Krishna Birthray</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 95,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 20,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+ 		</script>
+	</body>
+	
+</html>
