@@ -1,0 +1,1951 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Oracle|WebTech</title>
+
+	<style type='text/css'>
+			
+            
+                
+            
+        
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>404URLsValidation</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Apr 6, 2019 12:39:47 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='6.667%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='93.333%'>14</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0.41%'><span class='strong'>1</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='99.59%'>243</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-notifications/</span>
+						<span class='test-time'>Apr 6, 2019 12:39:59 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 12:39:59 AM</span>
+	<span class='label end-time'>Apr 6, 2019 12:44:40 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 41s+293ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:41:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjan2019-5251593.html>Solaris Third Party Bulletin - January 2019</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:41:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinoct2018-5139632.html>Solaris Third Party Bulletin - October 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:41:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjul2018-5013703.html>Solaris Third Party Bulletin - July 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:41:58 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinapr2018-4443185.html>Solaris Third Party Bulletin - April 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:02 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjan2018-4181198.html>Solaris Third Party Bulletin - January 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinoct2017-3958668.html>Solaris Third Party Bulletin - October 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:10 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjul2017-3814622.html>Solaris Third Party Bulletin - July 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:14 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinapr2017-3680911.html>Solaris Third Party Bulletin - April 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:19 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjan2017-3431551.html>Solaris Third Party Bulletin - January 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:23 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinoct2016-3090566.html>Solaris Third Party Bulletin - October 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:27 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjul2016-3090568.html>Solaris Third Party Bulletin - July 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:32 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinapr2016-2952098.html>Solaris Third Party Bulletin - April 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:36 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjan2016-2867206.html>Solaris Third Party Bulletin - January 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:40 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinoct2015-2511968.html>Solaris Third Party Bulletin - October 2015</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:44 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html>Solaris Third Party Bulletin - July 2015</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinapr2015-2511959.html>Solaris Third Party Bulletin - April 2015</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/bulletinjan2015-2370101.html>Solaris Third Party Bulletin - January 2015</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:42:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjan2019-5278195.html>Oracle Linux Bulletin - January 2019</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinoct2018-5142979.html>Oracle Linux Bulletin - October 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjul2018-4956455.html>Oracle Linux Bulletin - July 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:10 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinapr2018-4431087.html>Oracle Linux Bulletin - April 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:14 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjan2018-4214643.html>Oracle Linux Bulletin - January 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:19 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinoct2017-4005894.html>Oracle Linux Bulletin - October 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:23 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjul2017-3832368.html>Oracle Linux Bulletin - July 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:27 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinapr2017-3664625.html>Oracle Linux Bulletin - April 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:32 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjan2017-3255430.html>Oracle Linux Bulletin - January 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:36 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinoct2016-3090545.html>Oracle Linux Bulletin - October 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:40 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjul2016-3090544.html>Oracle Linux Bulletin - July 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:44 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinapr2016-2952096.html>Oracle Linux Bulletin - April 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html>Oracle Linux Bulletin - January 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/linuxbulletinoct2015-2719645.html>Oracle Linux Bulletin - October 2015</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:58 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjan2019-5278196.html>Oracle VM Server for x86 Bulletin - January 2019</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:02 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjul2018-4956456.html>Oracle VM Server for x86 Bulletin - July 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinoct2018-5142981.html>Oracle VM Server for x86 Bulletin - October 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:11 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinapr2018-4431088.html>Oracle VM Server for x86 Bulletin - April 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:15 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjan2018-4214644.html>Oracle VM Server for x86 Bulletin - January 2018</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:19 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinoct2017-4005895.html>Oracle VM Server for x86 Bulletin - October 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:23 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjul2017-3832369.html>Oracle VM Server for x86 Bulletin - July 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:28 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinapr2017-3664626.html>Oracle VM Server for x86 Bulletin - April 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:32 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjan2017-3431552.html>Oracle VM Server for x86 Bulletin - January 2017</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:36 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinoct2016-3090547.html>Oracle VM Server for x86 Bulletin - October 2016</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:44:40 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/technetwork/topics/security/ovmbulletinjul2016-3090546.html>Oracle VM Server for x86 Bulletin - July 2016</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-notifications/cpu/cpujan2018.html</span>
+						<span class='test-time'>Apr 6, 2019 12:44:52 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 12:44:52 AM</span>
+	<span class='label end-time'>Apr 6, 2019 12:48:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 12s+57ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:30 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/4110638.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:36 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:40 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:45 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:51 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:46:56 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#HCAR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:11 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:15 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:20 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#JME>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:24 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:28 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:42 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:47 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:51 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:47:56 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:48:00 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#TOOL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:48:04 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujan2018verbose-3236630.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpuapr2018.html</span>
+						<span class='test-time'>Apr 6, 2019 12:48:16 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 12:48:16 AM</span>
+	<span class='label end-time'>Apr 6, 2019 12:51:54 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 38s+213ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/4422902.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:25 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:30 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#GG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:34 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#GG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:39 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:43 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:48 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:52 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:07 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:11 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:25 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:29 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:34 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:42 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:46 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#TOOL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:50 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#UTIL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:54 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2018verbose-3678108.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpujul2018.html</span>
+						<span class='test-time'>Apr 6, 2019 12:52:07 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 12:52:07 AM</span>
+	<span class='label end-time'>Apr 6, 2019 12:55:58 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 50s+576ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:13 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/4703578.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:17 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#GLM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:25 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#GLM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:30 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:35 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:39 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:43 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:47 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:51 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:55 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:59 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:03 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#ILRN>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:07 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#INSU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:11 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:15 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:19 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:24 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:28 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#POLI>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:41 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:45 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:50 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#TOOL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:54 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#UTIL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:55:58 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujul2018verbose-4258253.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpuoct2018.html</span>
+						<span class='test-time'>Apr 6, 2019 12:56:16 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 12:56:16 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:00:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 52s+196ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:13 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/5115881.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:17 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#BGDG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:26 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#GG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:30 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#BGDG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:34 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#GG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:38 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:42 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:46 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:50 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:55 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:58:59 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#FBBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:03 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:08 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#HCAR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:12 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#ILRN>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:25 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#INSU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:29 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:38 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:42 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:46 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:51 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:55 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:59:59 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:00:04 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#TOOL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:00:08 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2018verbose-5170927.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpuoct2017.html</span>
+						<span class='test-time'>Apr 6, 2019 01:00:29 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:00:29 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:03:41 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 12s+44ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:20 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/3937099.xml>Oracle Technology Network</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:24 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:29 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:38 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:42 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:46 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:50 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:54 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#HCAR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:02:58 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:03 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:07 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:11 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:20 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:24 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:28 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:41 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuoct2017verbose-3236627.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/alert-cve-2018-3110.html</span>
+						<span class='test-time'>Apr 6, 2019 01:03:52 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:03:52 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:05:10 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 18s+539ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:05:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2018-3110-verbose-5032194.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:05:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/5038815.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:05:10 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2018-3110-verbose-5032194.html#DB>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpuoct2011.html</span>
+						<span class='test-time'>Apr 6, 2019 01:05:30 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:05:30 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:06:43 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 13s+444ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:06:43 AM</td>
+					<td class='step-details'><a href=https://www.oracle.com/technetwork/topics/security/changesforsunsecuritypolicies-162219.html>Changes in security policies for the Sun product lines.</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/alert-cve-2012-1675.html</span>
+						<span class='test-time'>Apr 6, 2019 01:06:56 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:06:56 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:08:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+389ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:08:00 AM</td>
+					<td class='step-details'>No broken URL found</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-notifications/cpu/cpujul2017.html</span>
+						<span class='test-time'>Apr 6, 2019 01:08:14 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:08:14 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:11:27 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 13s+377ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:09:48 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/3809960.xml>Oracle Technology Network</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:09:52 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:09:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#REST>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#REST>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:05 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:09 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:14 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:18 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:26 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:31 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:35 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#OCOM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:39 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#ILRN>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:44 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:10:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:02 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#TOOL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:10 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#POLI>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:15 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:19 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:23 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:27 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-notifications/cpu/cpujul2017verbose-3236625.html#OVIR>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/alert-cve-2018-11776.html</span>
+						<span class='test-time'>Apr 6, 2019 01:11:42 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:11:42 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:13:01 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 18s+983ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:12:52 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2018-11776-verbose-5072788.html#3RD>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:12:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2018-11776-verbose-5072788.html#3RD>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:13:01 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/5072789.xml>CVRF XML version of the risk matrices</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpuapr2017.html</span>
+						<span class='test-time'>Apr 6, 2019 01:13:12 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:13:12 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:17:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 52s+624ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/3681811.xml>Oracle Technology Network</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:20 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#OSB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:24 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:29 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#OSB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#BDB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:41 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#HYP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:45 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:54 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:15:57 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:02 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:06 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:09 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#OCOM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:13 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:18 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:22 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#HCAR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:26 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#HOSP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:31 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#INSU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:35 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:39 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#UTIL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:43 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:47 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:52 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:16:56 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#OVIR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:17:00 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#MSQL>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:17:05 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpuapr2017verbose-3236619.html#TOOL>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/cpujan2017.html</span>
+						<span class='test-time'>Apr 6, 2019 01:17:18 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:17:18 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:20:28 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 10s+103ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:18:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/3432537.xml>Oracle Technology Network</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:18:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#DB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:18:58 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#OSB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:03 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#BGDG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:07 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#OSB>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:12 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#BGDG>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:16 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:21 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#EM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:25 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#EBS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:29 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#SCP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:33 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#PS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:37 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#JDE>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:41 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#SECR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:46 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#OCOM>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:51 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#CGBU>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:55 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#IFLX>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:00 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#RAPP>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:04 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#PVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:08 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#JAVA>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:12 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#SUNS>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:17 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#OVIR>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:20:28 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/cpujan2017verbose-2881728.html#MSQL>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/alert-cve-2015-4852.html</span>
+						<span class='test-time'>Apr 6, 2019 01:20:39 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:20:39 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:21:53 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 14s+558ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:21:49 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/2765726.xml>Oracle Technology Network</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:21:53 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2015-4852-verbose-2763334.html#FMW>here</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>https://www-sites.oracle.com/security-alerts/alert-cve-2017-9805.html</span>
+						<span class='test-time'>Apr 6, 2019 01:22:04 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2019 01:22:04 AM</span>
+	<span class='label end-time'>Apr 6, 2019 01:23:17 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 12s+986ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:13 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/security-alerts/alert-cve-2017-10269-verbose-4021892.html#FMW>here</a></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:17 AM</td>
+					<td class='step-details'><a href=https://www-sites.oracle.com/ocom/groups/public/@otn/documents/webcontent/4021804.xml>Oracle Technology Network</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>15</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>244</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 6, 2019 12:39:47 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 6, 2019 01:23:17 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 43m 30s+540ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Environment</td>
+								<td><a href='http://www.Oracle.com/index.html'>Oracle|WebTech</a></td>
+							</tr>
+							<tr>
+								<td>Author</td>
+								<td>Naman Krishna Birthray</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 14,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 14,
+				
+				passChild: 1,
+				failChild: 243,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 243,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+ 		</script>
+	</body>
+	
+</html>
